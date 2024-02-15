@@ -1,0 +1,1049 @@
+[gd_scene load_steps=9 format=3 uid="uid://d0gqkcs6x60pb"]
+
+[ext_resource type="Texture2D" uid="uid://c6gbi0o4m3174" path="res://Sprites/Fondo_2.png" id="1_1dmbl"]
+[ext_resource type="Script" path="res://Scripts/Plano_1.gd" id="1_4oxdi"]
+[ext_resource type="Texture2D" uid="uid://b33jp878cvwfy" path="res://Sprites/Tabla_pre.png" id="1_pdxma"]
+[ext_resource type="FontFile" uid="uid://k46xsgolh37n" path="res://Assets/Phatone-Regular.otf" id="2_2v2kq"]
+[ext_resource type="FontFile" uid="uid://ctnm46oi3x0qt" path="res://Assets/dogicapixel.ttf" id="2_xp8xp"]
+[ext_resource type="Texture2D" uid="uid://cd2732xkuc2u5" path="res://Sprites/basura.png" id="3_y7wi3"]
+[ext_resource type="Texture2D" uid="uid://biu4btg78j2bt" path="res://Sprites/Panel.png" id="4_rf7hh"]
+[ext_resource type="FontFile" uid="uid://2j8gqyu2ynea" path="res://Assets/Kenney Future.ttf" id="5_5ioro"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_4oxdi")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 578.0
+offset_top = 495.0
+offset_right = 1149.0
+offset_bottom = 555.0
+theme_override_fonts/normal_font = ExtResource("2_xp8xp")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[wave amp=10 freq=4]△EN = [/wave]"
+
+[node name="Atomo1" type="Sprite2D" parent="."]
+position = Vector2(660, 300)
+
+[node name="Atomo2" type="Sprite2D" parent="."]
+position = Vector2(1030, 300)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 578.0
+offset_top = 400.0
+offset_right = 1115.0
+offset_bottom = 470.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_xp8xp")
+theme_override_font_sizes/font_size = 25
+text = "△EN ="
+
+[node name="Total" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_xp8xp")
+theme_override_font_sizes/font_size = 26
+text = "0.0"
+
+[node name="Resultado" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_xp8xp")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+
+[node name="Primer" type="Label" parent="."]
+offset_left = 580.0
+offset_top = 90.0
+offset_right = 747.0
+offset_bottom = 133.0
+size_flags_horizontal = 8
+theme_override_fonts/font = ExtResource("2_2v2kq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Basura" type="Button" parent="Primer"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -21.5
+offset_top = -35.0
+offset_right = 16.5
+offset_bottom = 3.0
+grow_horizontal = 2
+focus_mode = 0
+icon = ExtResource("3_y7wi3")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Primer"]
+position = Vector2(82, 21)
+scale = Vector2(1.0875, 0.9)
+texture = ExtResource("4_rf7hh")
+
+[node name="Label" type="Label" parent="Primer"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -81.0
+offset_top = -30.0
+offset_right = 81.0
+offset_bottom = 13.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_2v2kq")
+text = "ELEMENTO 1"
+
+[node name="Datos1" type="Label" parent="."]
+offset_left = 580.0
+offset_top = 140.0
+offset_right = 747.0
+offset_bottom = 183.0
+size_flags_horizontal = 8
+theme_override_fonts/font = ExtResource("2_2v2kq")
+theme_override_font_sizes/font_size = 13
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Datos1"]
+position = Vector2(82, 21)
+scale = Vector2(1.0875, 0.9)
+texture = ExtResource("4_rf7hh")
+
+[node name="Alerta" type="Label" parent="Datos1"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -85.0
+offset_top = 2.0
+offset_right = 85.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("5_5ioro")
+theme_override_font_sizes/font_size = 15
+
+[node name="Segundo" type="Label" parent="."]
+offset_left = 950.0
+offset_top = 90.0
+offset_right = 1117.0
+offset_bottom = 133.0
+size_flags_horizontal = 8
+theme_override_fonts/font = ExtResource("2_2v2kq")
+horizontal_alignment = 1
+
+[node name="Basura2" type="Button" parent="Segundo"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -21.5
+offset_top = -35.0
+offset_right = 16.5
+offset_bottom = 3.0
+grow_horizontal = 2
+focus_mode = 0
+icon = ExtResource("3_y7wi3")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Segundo"]
+position = Vector2(82, 21)
+scale = Vector2(1.0875, 0.9)
+texture = ExtResource("4_rf7hh")
+
+[node name="Label" type="Label" parent="Segundo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -81.0
+offset_top = -30.0
+offset_right = 81.0
+offset_bottom = 13.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_2v2kq")
+text = "ELEMENTO 2"
+
+[node name="Datos2" type="Label" parent="."]
+offset_left = 950.0
+offset_top = 140.0
+offset_right = 1117.0
+offset_bottom = 183.0
+size_flags_horizontal = 8
+theme_override_fonts/font = ExtResource("2_2v2kq")
+theme_override_font_sizes/font_size = 13
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Datos2"]
+position = Vector2(82, 21)
+scale = Vector2(1.0875, 0.9)
+texture = ExtResource("4_rf7hh")
+
+[node name="Alerta" type="Label" parent="Datos2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -85.0
+offset_top = 2.0
+offset_right = 85.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("5_5ioro")
+theme_override_font_sizes/font_size = 15
+text = " "
+
+[node name="Tabla" type="Sprite2D" parent="."]
+position = Vector2(290, 325)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_pdxma")
+
+[node name="GridContainer" type="GridContainer" parent="Tabla"]
+offset_left = -351.0
+offset_top = -337.0
+offset_right = 353.0
+offset_bottom = 336.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="Hidrogeno" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(86, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonH" type="Button" parent="Tabla/GridContainer/Hidrogeno"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 7.0
+offset_right = 87.0
+offset_bottom = 96.0
+flat = true
+
+[node name="nada" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="nada2" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="nada3" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="nada4" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="nada5" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="nada6" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Helio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(96, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonHe" type="Button" parent="Tabla/GridContainer/Helio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Litio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(86, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonLi" type="Button" parent="Tabla/GridContainer/Litio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Berilio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonBe" type="Button" parent="Tabla/GridContainer/Berilio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Boro" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonB" type="Button" parent="Tabla/GridContainer/Boro"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Carbono" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonC" type="Button" parent="Tabla/GridContainer/Carbono"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Nitrogeno" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonN" type="Button" parent="Tabla/GridContainer/Nitrogeno"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Oxigeno" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonO" type="Button" parent="Tabla/GridContainer/Oxigeno"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Fluor" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonF" type="Button" parent="Tabla/GridContainer/Fluor"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Neon" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(96, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonNe" type="Button" parent="Tabla/GridContainer/Neon"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Sodio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(86, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonNa" type="Button" parent="Tabla/GridContainer/Sodio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Magnesio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonMg" type="Button" parent="Tabla/GridContainer/Magnesio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Aluminio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonAl" type="Button" parent="Tabla/GridContainer/Aluminio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Silicio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonSi" type="Button" parent="Tabla/GridContainer/Silicio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Fosforo" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonP" type="Button" parent="Tabla/GridContainer/Fosforo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Azufre" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonS" type="Button" parent="Tabla/GridContainer/Azufre"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Cloro" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonCl" type="Button" parent="Tabla/GridContainer/Cloro"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Argon" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(96, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonAr" type="Button" parent="Tabla/GridContainer/Argon"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Potasio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(86, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonK" type="Button" parent="Tabla/GridContainer/Potasio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Calcio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonCa" type="Button" parent="Tabla/GridContainer/Calcio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Galio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonGa" type="Button" parent="Tabla/GridContainer/Galio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Germanio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonGe" type="Button" parent="Tabla/GridContainer/Germanio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Arsenico" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonAs" type="Button" parent="Tabla/GridContainer/Arsenico"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Selenio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonSe" type="Button" parent="Tabla/GridContainer/Selenio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Bromo" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonBr" type="Button" parent="Tabla/GridContainer/Bromo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Kripton" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(96, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonKr" type="Button" parent="Tabla/GridContainer/Kripton"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Rubidio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(86, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonRb" type="Button" parent="Tabla/GridContainer/Rubidio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Estroncio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonSr" type="Button" parent="Tabla/GridContainer/Estroncio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Indio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonIn" type="Button" parent="Tabla/GridContainer/Indio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Estaño" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonSn" type="Button" parent="Tabla/GridContainer/Estaño"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Antimonio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonSb" type="Button" parent="Tabla/GridContainer/Antimonio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Telurio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonTe" type="Button" parent="Tabla/GridContainer/Telurio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Yodo" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonI" type="Button" parent="Tabla/GridContainer/Yodo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Xenon" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(96, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonXe" type="Button" parent="Tabla/GridContainer/Xenon"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Cesio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(86, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonCs" type="Button" parent="Tabla/GridContainer/Cesio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Bario" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonBa" type="Button" parent="Tabla/GridContainer/Bario"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Talio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonTl" type="Button" parent="Tabla/GridContainer/Talio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Plomo" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonPb" type="Button" parent="Tabla/GridContainer/Plomo"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Bismuto" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonBi" type="Button" parent="Tabla/GridContainer/Bismuto"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Polonio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonPo" type="Button" parent="Tabla/GridContainer/Polonio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Astato" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonAt" type="Button" parent="Tabla/GridContainer/Astato"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Radon" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(96, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonRn" type="Button" parent="Tabla/GridContainer/Radon"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Francio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(86, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonFr" type="Button" parent="Tabla/GridContainer/Francio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Radio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonRa" type="Button" parent="Tabla/GridContainer/Radio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Nihonio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonNh" type="Button" parent="Tabla/GridContainer/Nihonio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Flerovio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonFl" type="Button" parent="Tabla/GridContainer/Flerovio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Moscovio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonMc" type="Button" parent="Tabla/GridContainer/Moscovio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Livermorio" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonLv" type="Button" parent="Tabla/GridContainer/Livermorio"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Teneso" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(87, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonTs" type="Button" parent="Tabla/GridContainer/Teneso"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Oganeson" type="ColorRect" parent="Tabla/GridContainer"]
+custom_minimum_size = Vector2(96, 95)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonOg" type="Button" parent="Tabla/GridContainer/Oganeson"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 86.0
+offset_bottom = 95.0
+flat = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tabla"]
+visible = false
+offset_left = -353.0
+offset_top = -337.0
+offset_right = 353.0
+offset_bottom = 334.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Tabla/VBoxContainer"]
+layout_mode = 2
+
+[node name="H" type="Button" parent="Tabla/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(95, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 65
+text = "H"
+flat = true
+icon_alignment = 1
+
+[node name="He" type="Button" parent="Tabla/VBoxContainer/HBoxContainer"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 65
+text = "He"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Tabla/VBoxContainer"]
+layout_mode = 2
+
+[node name="H" type="Button" parent="Tabla/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 65
+text = "H"
+flat = true
+icon_alignment = 1
+
+[node name="H2" type="Button" parent="Tabla/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 65
+text = "H"
+flat = true
+icon_alignment = 1
+
+[node name="H3" type="Button" parent="Tabla/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 65
+text = "H"
+flat = true
+icon_alignment = 1
+
+[node name="H4" type="Button" parent="Tabla/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(95, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 65
+text = "H"
+flat = true
+icon_alignment = 1
+
+[node name="H5" type="Button" parent="Tabla/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(95, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 65
+text = "H"
+flat = true
+icon_alignment = 1
+
+[node name="H6" type="Button" parent="Tabla/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(95, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 65
+text = "H"
+flat = true
+icon_alignment = 1
+
+[node name="H7" type="Button" parent="Tabla/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(95, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 65
+text = "H"
+flat = true
+icon_alignment = 1
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(576, 323)
+scale = Vector2(1.00174, 1)
+texture = ExtResource("1_1dmbl")
+
+[connection signal="pressed" from="Primer/Basura" to="." method="_on_basura_pressed"]
+[connection signal="pressed" from="Segundo/Basura2" to="." method="_on_basura_2_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Hidrogeno/ButtonH" to="." method="_on_button_h_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Helio/ButtonHe" to="." method="_on_button_he_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Litio/ButtonLi" to="." method="_on_button_li_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Berilio/ButtonBe" to="." method="_on_button_be_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Boro/ButtonB" to="." method="_on_button_b_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Carbono/ButtonC" to="." method="_on_button_c_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Nitrogeno/ButtonN" to="." method="_on_button_n_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Oxigeno/ButtonO" to="." method="_on_button_o_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Fluor/ButtonF" to="." method="_on_button_f_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Neon/ButtonNe" to="." method="_on_button_ne_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Sodio/ButtonNa" to="." method="_on_button_na_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Magnesio/ButtonMg" to="." method="_on_button_mg_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Aluminio/ButtonAl" to="." method="_on_button_al_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Silicio/ButtonSi" to="." method="_on_button_si_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Fosforo/ButtonP" to="." method="_on_button_p_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Azufre/ButtonS" to="." method="_on_button_s_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Cloro/ButtonCl" to="." method="_on_button_cl_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Argon/ButtonAr" to="." method="_on_button_ar_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Potasio/ButtonK" to="." method="_on_button_k_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Calcio/ButtonCa" to="." method="_on_button_ca_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Galio/ButtonGa" to="." method="_on_button_ga_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Germanio/ButtonGe" to="." method="_on_button_ge_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Arsenico/ButtonAs" to="." method="_on_button_as_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Selenio/ButtonSe" to="." method="_on_button_se_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Bromo/ButtonBr" to="." method="_on_button_br_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Kripton/ButtonKr" to="." method="_on_button_kr_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Rubidio/ButtonRb" to="." method="_on_button_rb_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Estroncio/ButtonSr" to="." method="_on_button_sr_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Indio/ButtonIn" to="." method="_on_button_in_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Estaño/ButtonSn" to="." method="_on_button_sn_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Antimonio/ButtonSb" to="." method="_on_button_sb_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Telurio/ButtonTe" to="." method="_on_button_te_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Yodo/ButtonI" to="." method="_on_button_i_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Xenon/ButtonXe" to="." method="_on_button_xe_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Cesio/ButtonCs" to="." method="_on_button_cs_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Bario/ButtonBa" to="." method="_on_button_ba_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Talio/ButtonTl" to="." method="_on_button_tl_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Plomo/ButtonPb" to="." method="_on_button_pb_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Bismuto/ButtonBi" to="." method="_on_button_bi_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Polonio/ButtonPo" to="." method="_on_button_po_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Astato/ButtonAt" to="." method="_on_button_at_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Radon/ButtonRn" to="." method="_on_button_rn_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Francio/ButtonFr" to="." method="_on_button_fr_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Radio/ButtonRa" to="." method="_on_button_ra_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Nihonio/ButtonNh" to="." method="_on_button_nh_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Flerovio/ButtonFl" to="." method="_on_button_fl_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Moscovio/ButtonMc" to="." method="_on_button_mc_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Livermorio/ButtonLv" to="." method="_on_button_lv_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Teneso/ButtonTs" to="." method="_on_button_ts_pressed"]
+[connection signal="pressed" from="Tabla/GridContainer/Oganeson/ButtonOg" to="." method="_on_button_og_pressed"]

@@ -1,0 +1,101 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmkexhm771ll1"]
+
+[ext_resource type="FontFile" uid="uid://cdbbfwb83hlau" path="res://Assets/dogica.ttf" id="1_5o5gk"]
+[ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_i8ycn"]
+[ext_resource type="FontFile" uid="uid://k46xsgolh37n" path="res://Assets/Phatone-Regular.otf" id="2_7tcox"]
+[ext_resource type="Texture2D" uid="uid://bcgxw4xuesby5" path="res://Sprites/Fondo.png" id="3_a1cwa"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i8ycn")
+
+[node name="VBoxBotones" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -295.0
+offset_top = -100.0
+offset_right = 295.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxBotones"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 1, 0.188235, 1)
+theme_override_constants/line_spacing = 20
+theme_override_fonts/font = ExtResource("2_7tcox")
+theme_override_font_sizes/font_size = 30
+text = "ELECTRONEGATIVIDAD"
+horizontal_alignment = 1
+
+[node name="Entrar" type="Button" parent="VBoxBotones"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_hover_color = Color(0.447059, 0.772549, 0, 1)
+theme_override_fonts/font = ExtResource("1_5o5gk")
+theme_override_font_sizes/font_size = 25
+text = "ENTRAR"
+flat = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxBotones/Entrar"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 48.0
+offset_top = -30.0
+offset_right = 88.0
+offset_bottom = 36.0
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("1_5o5gk")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "[wave amp=20 freq=3] > [/wave]"
+
+[node name="Salir" type="Button" parent="VBoxBotones"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_hover_color = Color(0.447059, 0.772549, 0, 1)
+theme_override_fonts/font = ExtResource("1_5o5gk")
+theme_override_font_sizes/font_size = 25
+text = "SALIR"
+flat = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxBotones/Salir"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = -16.0
+offset_right = 88.0
+offset_bottom = 50.0
+theme_override_fonts/normal_font = ExtResource("1_5o5gk")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "[wave amp=20 freq=3] > [/wave]"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(576, 323)
+scale = Vector2(1.00174, 1)
+texture = ExtResource("3_a1cwa")
+
+[connection signal="mouse_entered" from="VBoxBotones/Entrar" to="." method="_on_entrar_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxBotones/Entrar" to="." method="_on_entrar_mouse_exited"]
+[connection signal="pressed" from="VBoxBotones/Entrar" to="." method="_on_entrar_pressed"]
+[connection signal="mouse_entered" from="VBoxBotones/Salir" to="." method="_on_salir_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxBotones/Salir" to="." method="_on_salir_mouse_exited"]
+[connection signal="pressed" from="VBoxBotones/Salir" to="." method="_on_salir_pressed"]
